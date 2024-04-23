@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando HTML con JavaScript</title>
+</head>
+<body>
+    <div class="content" id="content_first">
+        <p>Contenido dinámico aquí</p>
+    </div>
+    <div class="content" id="content_second" hidden>
+        <p>Segunda sección</p>
+    </div>
+
+<script>
+    // Corrigiendo el nombre del método
+    let body = document.getElementsByTagName("body")[0];
+    //console.log(body.innerHTML)
+    // Accediendo a la colección correcta de elementos
+    let elementos = document.getElementsByTagName("*");
+    //console log
+    // Iterando sobre los elementos utilizando un bucle
+    for (elemento of elementos) 
+        
+        // Verificando si el id del elemento coincide con 'content_first'
+        //if (elemento.id == "content_first") {
+          //  elemento.innerHTML = "<p>nuevo contenido</p>";
+        //}
+        if (elemento.id == "content_second" ){
+            elemento.innerHTML = "Segundo Contenido";
+            elemento.remveAttribute("hidden");
+        }
+    
+</script>
+
+    
+</script>
+</body>
+</html>
